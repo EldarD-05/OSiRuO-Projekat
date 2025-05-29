@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  padding: 30px;
+}
+
+.detalji {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.detalji img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.detalji a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #00b894;
+  font-weight: bold;
+}
