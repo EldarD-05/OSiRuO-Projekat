@@ -1,27 +1,51 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #333;
-  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  color: #2d3436;
+  padding: 40px;
 }
 
-.detalji {
-  max-width: 600px;
+.student-details {
+  max-width: 800px;
   margin: auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  padding: 30px;
   text-align: center;
 }
 
-.detalji img {
-  width: 100%;
-  border-radius: 10px;
+.student-details img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 
-.detalji a {
+.student-details h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.student-details p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.back-link {
   display: inline-block;
   margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #00b894;
+  color: white;
   text-decoration: none;
-  color: #00b894;
-  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #019875;
 }
