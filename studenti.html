@@ -1,31 +1,58 @@
 <!DOCTYPE html>
-<html lang="sr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studenti</title>
   <link rel="stylesheet" href="studenti.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <header>
-    <h1>Studenti</h1>
+  <header class="main-header">
+    <h1>PREGLED STUDENATA</h1>
   </header>
+
+  <nav class="filter-navbar">
+    <ul class="filter-menu">
+      <li><button class="active" onclick="filterStudents(this, 'all')">Svi</button></li>
+      <li><button onclick="filterStudents(this, 'frontend')">Frontend</button></li>
+      <li><button onclick="filterStudents(this, 'backend')">Backend</button></li>
+      <li><button onclick="filterStudents(this, 'data')">Data Science</button></li>
+    </ul>
+  </nav>
+
+
   <main class="studenti-container">
-    <a href="student1.html" class="student-card">
-      <img src="student1.jpg" alt="Student 1">
-      <h2>Amir K.</h2>
+    <a href="student1.html" class="student-card frontend">
+      <img src="./images/eldar.jpg" alt="Student 1">
+      <h2>Eldar Deronja</h2>
       <p>Frontend developer, dizajn entuzijasta</p>
     </a>
-    <a href="student2.html" class="student-card">
-      <img src="student2.jpg" alt="Student 2">
-      <h2>Lejla M.</h2>
+    <a href="student2.html" class="student-card data">
+      <img src="./images/naida.jpg" alt="Student 2">
+      <h2>Naida Burkic</h2>
       <p>Data scientist u nastajanju, ljubitelj statistike</p>
     </a>
-    <a href="student3.html" class="student-card">
-      <img src="student3.jpg" alt="Student 3">
-      <h2>Marko R.</h2>
+    <a href="student3.html" class="student-card backend">
+      <img src="./images/amna.jpg" alt="Student 3">
+      <h2>Amna Becak</h2>
       <p>Backend developer i DevOps entuzijasta</p>
     </a>
   </main>
+
+  <script>
+    function filterStudents(btn, category) {
+      const cards = document.querySelectorAll('.student-card');
+      const buttons = document.querySelectorAll('.filter-menu button');
+
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      cards.forEach(card => {
+        card.style.display = (category === 'all' || card.classList.contains(category)) ? 'block' : 'none';
+      });
+    }
+  </script>
+
 </body>
 </html>
